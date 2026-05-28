@@ -1,0 +1,33 @@
+body {
+    background-image: url(caixa-economica-federal.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.imagem {
+    display: block;
+    flex-direction: row;
+    width: 250px;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 40px;
+}
+
+.nome {
+    color:rgb(255, 255, 255)
+}
+
+.texto {
+    color: rgb(255, 255, 255);
+}
+
+.botao {
+    background-color: rgb(255, 255, 255);
+    color:rgb(10, 57, 78);
+}
