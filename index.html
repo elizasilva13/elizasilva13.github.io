@@ -1,144 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site da Eliza</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background: linear-gradient(135deg, #c0595e, #fdd9de);
-      color: rgb(100, 6, 6);
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 50px;
-    }
-
-    header h1 {
-      font-size: 24px;
-    }
-
-    nav a {
-      color: rgb(255, 255, 255);
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-    }
-
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 60px 50px;
-    }
-
-    .hero-text {
-      max-width: 50%;
-    }
-
-    .hero-text h2 {
-      font-size: 40px;
-      margin-bottom: 20px;
-    }
-
-    .hero-text p {
-      margin-bottom: 20px;
-      font-size: 18px;
-    }
-
-    .hero-text button {
-      padding: 15px 25px;
-      border: none;
-      background: rgb(131, 2, 2);
-      color: #ffffff;
-      font-weight: bold;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    .hero img {
-      width: 500px;
-      border-radius: 50px;
-    }
-
-    .features {
-      display: flex;
-      justify-content: space-around;
-      padding: 50px;
-      background: rgba(104, 5, 5, 0.479);
-    }
-
-    .feature {
-      max-width: 250px;
-      text-align: center;
-    }
-
-    .feature h3 {
-      margin-bottom: 10px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.2);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotérica</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <img src="caixa-economica-federal-logo-vector.png" class="imagem">
+    <br>
+    <form id="formulario">
+        <fieldset class="caixa">
+            <div class="nome">
+            <legend>Fila do Nubank</legend>
+            <label for="nome">Nome:
+                <input
+                type="text"
+                placeholder="Informe seu nome"
+                id="nome"
+                class="caixa_entrada"
+                required
+                >
+            </label>
+            <br>
+            <label for="normal">Normal
+                <input
+                type="radio"
+                name="radio_s"
+                id="normal"
+                value="normal"
+                >
+            </label>
+            <label for="prioridade">Prioridade
+                <input 
+                type="radio"
+                name="radio_s"
+                id="prioridade"
+                value="prioridade"
+                required
+                >
+            </label>
+            <br><br>
+            </div>
 
-  <header>
-    <h1>Liz Fashion</h1>
-    <nav>
-      <a href="#">Início</a>
-      <a href="#">Sobre</a>
-      <a href="#">Contato</a>
-    </nav>
-  </header>
+            <button type="submit" class="botao">Cadastrar</button>
+            <input type="button" id="cadastrado" onclick="listar()" class="botao" value="Consultar">
 
-  <section class="hero">
-    <div class="hero-text">
-      <h2>Liz Fashion</h2>
-      <p>Não é só roupa… é atitude.<br>
+        </fieldset>
+    </form>
 
-Se vestir bem não é sobre seguir regras,
- é sobre mostrar ao mundo quem você
-  é sem precisar dizer uma palavra.<br>
-<br>
+    <div>
+        <fieldset class="caixa">
+            <legend class="nome">Fila de espera</legend>
+    <div id="resultado_espera" class="nome"></div>
+        </fieldset>
+    </div> 
 
-Venha descobrir o look perfeito pra você!</p>
-      <button>Começar</button>
+    <div>
+        <br/>
+           <input type="button" id="atendimento" onclick="atender()" class="botao" value="Atendimento">
     </div>
-    <img src="Gemini_Generated_Image_69evsk69evsk69ev(1).png" alt="Imagem exemplo">
-  </section>
-
-  <section class="features">
-    <div class="feature">
-      <h3>Design Moderno</h3>
-      <p>Onde o seu estilo ganha vida.</p>
-    </div>
-    <div class="feature">
-      <h3>Elegante</h3>
-      <p>Seu brilho começa no look.</p>
-    </div>
-    <div class="feature">
-      <h3>Impactante
-      </h3>
-      <p>Se destaque sem dizer uma palavra.</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Liz Fashion - Todos os direitos reservados</p>
-  </footer>
-
+     <script src="script.js"></script>
 </body>
 </html>
